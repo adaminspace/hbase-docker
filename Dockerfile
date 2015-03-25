@@ -1,6 +1,8 @@
 # Start with latest CentOS image
 FROM centos
 
+MAINTAINER Adam Thomson adaminspace@gmail.com
+
 # Switch to root user
 USER root
 
@@ -47,7 +49,9 @@ EXPOSE 16020
 EXPOSE 16030
 
 # hbase.rest.port
-EXPOSE 8070
+EXPOSE 8080
 
-
+# Start HBase
 CMD hbase master start
+
+
